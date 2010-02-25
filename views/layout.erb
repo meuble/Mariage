@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Mariage de Claire et Michel</title>
+	<link rel="stylesheet" href="/site.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+
+<div class="wrapper auto_margin">
+	<div class="header">
+		<h1>Mariage de Claire et Michel</h1>
+		<p>Célébrer, se rassembler, partager des moments de joie.</p>
+	</div>
+	<ul class="menu margin_auto">
+		<li><%= link_to "Bienvenue", "/", :class => class_name_for(:home, @selected_item) %></li>
+		<li><%= link_to "Nous rejoindre", "/nous-rejoindre", :class => class_name_for(:meet_us, @selected_item) %></li>
+		<li><%= link_to "Où dormir ?", "/ou-dormir", :class => class_name_for(:sleeping, @selected_item) %></li>
+		<li><%= link_to "Chanter", "/chanter", :class => class_name_for(:sing, @selected_item) %></li>
+		<li><%= link_to "En images", "/en-images", :class => class_name_for(:pictures, @selected_item) %></li>
+		<li><%= link_to "Mots doux", "/mots-doux", :class => class_name_for(:sweet_words, @selected_item) %></li>
+		<li><%= link_to "Faire un cadeau", "/faire-un-cadeau", :class => class_name_for(:gifts, @selected_item) %></li>
+	</ul>
+
+    <div class="flash_messages"> 
+      <% if @flash[:error] %> 
+        <p class="error"><%= @flash[:error] %></p> 
+      <% end %> 
+      <% if @flash[:notice] %> 
+        <p class="notice"><%= @flash[:notice] %></p> 
+      <% end %> 
+    </div>
+
+	<div class="content">
+		<%= yield %>
+	</div>
+	
+	<div class="footer">
+		<p>Design par Claire et Pierre - Construction par Michel et Stéphane.</p>
+		<p>2010 tous droits réservés.</p>
+	</div>
+</div>
+</body>
+</html>

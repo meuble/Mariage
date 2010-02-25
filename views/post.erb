@@ -1,0 +1,6 @@
+<div class="post_item">
+	<div class="blue_bordered">
+		<p><%= post.name %> a écrit le <%= post.created_at.strftime("%A %d %B %Y à %H:%M") %> : </p>
+		<p><%= newlines_and_links(post.content) %></p>
+	</div>
+</div>

@@ -1,0 +1,143 @@
+body {
+	color: #5f5f5f;
+	font: 13px "Verdana", sans-serif;
+}
+
+a {	color: #5a5a5a; }
+
+.auto_margin {
+	margin: 0 auto;
+}
+
+.wrapper {
+	background: transparent url(/images/fond.jpg) no-repeat;
+	width: 940px;
+	min-height: 643px;
+}
+
+.header {
+	text-indent: -100000px;
+}
+
+.menu {
+	width: 540px;
+	padding-top: 85px;
+	padding-left: 160px;
+	text-align: center;
+	margin: 0;
+}
+
+.menu li {
+	display: inline;
+	font-size: 1.2em;
+}
+
+.menu a {
+	display: inline-block;
+	width: 130px;
+	line-height: 35px;
+	text-decoration: none;
+}
+
+.menu a.selected,
+.menu a:hover {
+	background: transparent url(/images/feuille.jpg) no-repeat center;
+	text-decoration: none;
+	color: black;
+}
+
+.content {
+	clear: both;
+	padding-left: 145px;
+	width: 535px;
+}
+
+.content iframe,
+.content p {
+	padding-left: 50px;
+}
+
+.footer {
+	padding-left: 160px;
+	width: 540px;
+	text-align: center;	
+	margin-top: 30px;
+}
+
+.footer p {
+	font-size: .8em;
+	margin: 0;
+}
+
+.center {
+	text-align: center;
+}
+
+.emphase {
+	font-weight: bold;
+}
+
+h2 {
+	color: #e0771a;
+	font-size: 1.5em;
+	padding-left: 50px;
+	background: transparent url(/images/oiseau.jpg) no-repeat left center;
+	line-height: 40px;
+	margin: 0;
+	margin-top: 10px;
+}
+
+.new_post {
+	margin-left: 50px;
+}
+
+.new_post textarea {
+	height:150px;
+	width:400px;;
+}
+
+.hidden {
+	display: none;
+}
+
+.flash_messages {
+	clear: both;
+	padding-left: 145px;
+	width: 535px;
+}
+
+.flash_messages p {
+	font-weight:bold;
+	margin-left:50px;
+	padding:10px;
+}
+
+.flash_messages .notice {
+	border: 1px solid #22E667;
+	background-color: #D5F5E0;	
+	color:#00B03E;	
+}
+
+.flash_messages .error {
+	border: 1px solid #E36A14;
+	background-color: #F5E2D5;
+	color:#B00009;
+}
+
+.post_item {
+	margin: 20px 0px 20px 0;
+	background: transparent url(/images/oiseau.jpg) no-repeat left top;
+}
+
+.post_item div {
+	margin-left:50px;
+}
+
+.post_item div p {
+	padding-left: 20px;
+}
+
+.blue_bordered {
+	border: 1px solid #2877C7;
+	background-color: #C4DCF5;
+}

@@ -1,0 +1,29 @@
+<h2>Mots doux</h2>
+
+<p>Si vous désirez nous laisser un petit mot, une suggestion, n'hésitez pas ! Nous les lirons comme autant de petits trésors...</p>
+
+<form action="/mots-doux" method="post" class="blue_bordered new_post">
+	<p><input type='text' name="post[name]" id="post_name" value="<%= @post.name %>"/>	
+	<label for="post_name">Nom</label><p>
+	
+	<p><input type='text' name="post[scrambledmiale]" id="post_scrambledmiale" value="<%= @post.email %>" />
+	<label for="post_name">Email</label></p>
+	
+	<p class="hidden"><input type='text' name="post[email]" id="post_email" />
+	<label for="post_name">Anti-spam (ne pas remplir)</label></p>
+	
+	<p>
+		<label for="post_name">Message</label><br />
+		<textarea name="post[content]" id="post_content"><%= @post.content %></textarea>
+	</p>
+	
+	<p><input type='submit' name='Enegistrer' /></p>
+</form>
+
+<% if @posts.empty? %>
+	<p>Il n'y a de message pour l'instant</p>
+<% else %>
+	<% for post in @posts do %>
+		<%= partial :post, :locals => {:post => post} %>
+	<% end %>
+<% end %>
