@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'vendor/sinatra/lib/sinatra.rb'
+require 'vendor/sequel/lib/sequel.rb'
 
 Sinatra::Application.default_options.merge!(
   :run => false,
