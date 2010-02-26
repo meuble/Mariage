@@ -3,6 +3,18 @@ require 'sinatra'
 require 'sequel'
 
 enable :sessions
+set :clean_trace, false
+
+configure do
+  LOGGER = Logger.new("sinatra.log") 
+end
+ 
+helpers do
+  def logger
+    LOGGER
+  end
+end
+
 
 DB = Sequel.sqlite 'posts.sqlite'
 
