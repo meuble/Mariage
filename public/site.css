@@ -30,6 +30,7 @@ a {	color: #5a5a5a; }
 .menu li {
 	display: inline;
 	font-size: 1.2em;
+	margin bottom: 13px;
 }
 
 .menu a {
