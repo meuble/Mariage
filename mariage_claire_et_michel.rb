@@ -144,3 +144,7 @@ get '/faire-un-cadeau' do
   @selected_item = :gifts
   erb :gifts
 end
+
+get '/questionnaire' do
+  erb :questionnaire
+end
