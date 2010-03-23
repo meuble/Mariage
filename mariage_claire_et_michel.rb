@@ -2,86 +2,11 @@ require 'rubygems'
 require 'sinatra'
 require 'yaml'
 require 'yaml/store'
+require "src/post"
+require "src/extensions"
 
 enable :sessions
 set :clean_trace, false
-
-class Post
-  COLUMNS = [:id, :name, :email, :content, :created_at]
-  FILENAME = "sweet_words.yml"
-  
-  COLUMNS.each do |f| 
-    define_method(f.to_s) { @attributes[f] }
-  end
-  
-  class << self
-    def all
-      set = YAML::load_file(FILENAME)
-      return [] unless set
-      set.map {|i| self.load i.last}
-    end
-    
-    def load(array)
-      return nil if array.nil? || array.empty?
-      hash = {}
-      array.each_with_index do |value, index|
-        hash[COLUMNS[index]] = value
-      end
-      Post.new(hash)
-    end
-    
-    def new_id
-      Time.now.to_i
-    end
-  end
-  
-  def initialize(attributes = {})
-    @attributes = attributes
-  end
-  
-  def id
-    @attributes[:id] ||= self.class.new_id
-  end
-  
-  def save
-    YAML::Store.new(FILENAME).transaction do | store |
-      store[self.class.name + '_' + self.id.to_s] = COLUMNS.map{|column| @attributes[column]}
-    end
-  end
-end
-
-class Date
-  alias :strftime_nolocale :strftime
-
-    FR_ABBR_DAYNAMES = %w(Dim Lun Mar Mer Jeu Ven Sam)
-    FR_MONTHNAMES =  [
-      nil, "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
-    FR_ABBR_MONTHNAMES =  [
-      nil, "jan", "fév", "mar", "avr", "mai", "jun", "jui", "aoû", "sep", "oct", "nov", "déc"]
-    FR_DAYNAMES = %w(dimanche lundi mardi mercredi jeudi vendredi samedi)    
-
-  def strftime(format)
-    format = format.dup
-    format.gsub!(/%a/, Date::FR_ABBR_DAYNAMES[self.wday])
-    format.gsub!(/%A/, Date::FR_DAYNAMES[self.wday])
-    format.gsub!(/%b/, Date::FR_ABBR_MONTHNAMES[self.mon])
-    format.gsub!(/%B/, Date::FR_MONTHNAMES[self.mon])
-    self.strftime_nolocale(format)
-  end
-end
-
-class Time
-  alias :strftime_nolocale :strftime
-
-  def strftime(format)
-    format = format.dup
-    format.gsub!(/%a/, Date::FR_ABBR_DAYNAMES[self.wday])
-    format.gsub!(/%A/, Date::FR_DAYNAMES[self.wday])
-    format.gsub!(/%b/, Date::FR_ABBR_MONTHNAMES[self.mon])
-    format.gsub!(/%B/, Date::FR_MONTHNAMES[self.mon])
-    self.strftime_nolocale(format)
-  end
-end
 
 before do 
   @flash = session["flash"] || {} 
