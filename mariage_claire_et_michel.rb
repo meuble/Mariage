@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
-require 'YAML'
-require 'YAML/Store'
+require 'yaml'
+require 'yaml/Store'
 
 enable :sessions
 set :clean_trace, false
