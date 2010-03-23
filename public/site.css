@@ -3,7 +3,7 @@ body {
 	font: 13px "Verdana", sans-serif;
 }
 
-a {	color: #5a5a5a; }
+a {	color: #e0771a; }
 
 .auto_margin {
 	margin: 0 auto;
@@ -37,6 +37,7 @@ a {	color: #5a5a5a; }
 	width: 130px;
 	line-height: 35px;
 	text-decoration: none;
+	color: #5a5a5a;
 }
 
 .menu a.selected,
@@ -57,7 +58,7 @@ a {	color: #5a5a5a; }
 	padding-left: 50px;
 }
 
-.content li {
+.housing li {
 	margin-bottom: 15px;
 }
 
