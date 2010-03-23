@@ -105,3 +105,7 @@ end
 get '/questionnaire' do
   erb :questionnaire
 end
+
+get '/diapo_test' do
+  erb :diapo_test
+end
