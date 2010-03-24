@@ -62,12 +62,12 @@ a {	color: #e0771a; }
 	padding-left: 50px;
 }
 
+.content ul{
+	padding-left: 50px;
+}
+
 .housing li {
 	margin-bottom: 15px;
-	padding-left: 15px;
-}
-.housing ul {
-	padding-left: 10px;
 }
 
 .footer {
