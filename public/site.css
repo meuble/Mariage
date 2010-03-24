@@ -58,6 +58,10 @@ a {	color: #e0771a; }
 	padding-left: 50px;
 }
 
+.content object {
+	padding-left: 50px;
+}
+
 .housing li {
 	margin-bottom: 15px;
 }
