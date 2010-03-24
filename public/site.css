@@ -30,6 +30,7 @@ a {	color: #e0771a; }
 .menu li {
 	display: inline;
 	font-size: 1.2em;
+	padding-left: 50px;
 }
 
 .menu a {
