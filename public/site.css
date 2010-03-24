@@ -64,7 +64,10 @@ a {	color: #e0771a; }
 
 .housing li {
 	margin-bottom: 15px;
-	padding-left: 50px;
+	padding-left: 15px;
+}
+.housing ul {
+	padding-left: 10px;
 }
 
 .footer {
