@@ -90,6 +90,10 @@ a {	color: #e0771a; }
 	font-weight: bold;
 }
 
+.ps {
+	font-weight: italic;
+}
+
 h2 {
 	color: #e0771a;
 	font-size: 1.5em;
