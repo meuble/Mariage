@@ -58,10 +58,6 @@ a {	color: #e0771a; }
 	padding-left: 50px;
 }
 
-.content object {
-	padding-left: 50px;
-}
-
 .content ul{
 	padding-left: 70px;
 }
@@ -157,4 +153,8 @@ h2 {
 .blue_bordered {
 	border: 1px solid #2877C7;
 	background-color: #C4DCF5;
+}
+
+.diapos {
+	margin: 0 0 0 -20px;
 }
