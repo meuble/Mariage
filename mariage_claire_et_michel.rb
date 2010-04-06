@@ -105,3 +105,7 @@ end
 get '/questionnaire' do
   erb :questionnaire
 end
+
+get '/hebergement' do
+  erb :hebergement
+end
